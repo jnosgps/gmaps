@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from . import Rider
+from .models import Rider
 
 def riders_list(request):
 	riders = Rider.objects.all()
