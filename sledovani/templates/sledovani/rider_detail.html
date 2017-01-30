@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 		<title>[{{ rider }}] Sledovani</title>
 		<meta name="viewport" contents="initial-scale=1.0, user-scalable=no">
 		<meta charset="utf-8">
@@ -26,10 +28,10 @@
 			function initMap() {
 				var map = new google.maps.Map(document.getElementById('map'), {
 					center: {
-						lat: -34.397,
-						lng: 150.644
+						lat: {{ rider.delka }},
+						lng: {{ rider.sirka }}
 					},
-					zoom: 20
+					zoom: 16
 				});
 				
 				var infoWindow = new google.maps.InfoWindow({map: map});
@@ -45,6 +47,7 @@
 						infoWindow.setPosition(pos);
 						infoWindow.setContent('A mame te! [{{ rider }}]');
 						map.setCenter(pos);
+						updateModelAJAX(pos.lat, pos.lng);
 					}, function() {
 						handleLocationError(true, infoWindow, map.getCenter());
 					});
@@ -58,6 +61,19 @@
 				infoWindow.setContent(browserHasGeo ? 
 														'Chyba! Geolokace spadla...' :
 														'Chyba! Tvuj prohlizec nepodporuje geolokaci...');
+			}
+			
+			function updateModelAJAX(dlat, dlng) {
+				var csrftoken = $.cookie('csrftoken');
+				$.ajaxSetup({
+					beforeSend: function(xhr, settings) {
+						xhr.setRequestHeader("X-CSRFToken", csrftoken);
+					}
+				});
+				$.post('', {lat:dlat,lng:dlng}, function (data, status) {
+					//alert('Data: ' + data + '; Status: ' + status);
+				});
+				//console.log(dlat + ', ' + dlng);
 			}
 		</script>
 		
