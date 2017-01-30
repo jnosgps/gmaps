@@ -11,11 +11,13 @@
 				<th>Souradnice</th>
 			</thead>
 			<tbody>
+				{% for rider in riders %}
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>{{ rider.name }}</td>
+					<td>{{ rider.up }}</td>
+					<td>{{ rider.delka }}, {{ rider.sirka }}</td>
 				</tr>
+				{% endfor %}
 			</tbody>
 		</table>
 	</body>
