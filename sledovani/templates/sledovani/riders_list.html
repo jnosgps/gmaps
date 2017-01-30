@@ -13,7 +13,7 @@
 			<tbody>
 				{% for rider in riders %}
 				<tr>
-					<td>{{ rider.name }}</td>
+					<td><a href="{% url 'rider_detail' pk=rider.pk %}">{{ rider.name }}</a></td>
 					<td>{{ rider.up }}</td>
 					<td>{{ rider.delka }}, {{ rider.sirka }}</td>
 				</tr>
