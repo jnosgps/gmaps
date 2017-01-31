@@ -15,7 +15,7 @@
 				<tr>
 					<td><a href="{% url 'rider_detail' pk=rider.pk %}">{{ rider.name }}</a></td>
 					<td>{{ rider.up }}</td>
-					<td>{{ rider.delka }}, {{ rider.sirka }}</td>
+					<td>{{ rider.lat }}, {{ rider.lng }}</td>
 				</tr>
 				{% endfor %}
 			</tbody>

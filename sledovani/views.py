@@ -10,12 +10,12 @@ def riders_list(request):
 def rider_detail(request, pk):
 	rider = get_object_or_404(Rider, pk=pk)
 	if request.method == 'POST':
-		lat = str(request.POST.get('lat'))
-		lng = str(request.POST.get('lng'))
-		#rider.update(lat, lng)
-		rider.delka = lat
-		rider.sirka = lng
-		rider.save()
+		lat = request.POST.get('lat')
+		lng = request.POST.get('lng')
+		rider.update(lat, lng, lat, lng)
+		#rider.delka = lat
+		#rider.sirka = lng
+		#rider.save()
 		#print 'LAT:', request.POST.get('lat'), 'LNG:', request.POST.get('lng')
 	
 	return render(request, 'sledovani/rider_detail.html', {

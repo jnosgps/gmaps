@@ -6,13 +6,16 @@ class Rider(models.Model):
 	delka = models.CharField(max_length=18)
 	sirka = models.CharField(max_length=18)
 	up = models.DateTimeField(auto_now=True)
+	lat = models.DecimalField(max_digits=10, decimal_places=6)
+	lng = models.DecimalField(max_digits=10, decimal_places=6)
 	
-	def update(self, dx, dy):
-		delka = dx
-		sirka = dy
+	def update(self, dx, dy, lat, lng):
+		self.delka = dx
+		self.sirka = dy
+		self.lat = lat
+		self.lng = lng
 		up = timezone.now()
 		self.save()
-		print delka, sirka
 	
 	def __str__(self):
 		return self.name
