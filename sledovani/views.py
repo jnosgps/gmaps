@@ -31,6 +31,6 @@ def rider_detail(request, pk):
 		#print 'LAT:', request.POST.get('lat'), 'LNG:', request.POST.get('lng')
 	
 	return render(request, 'sledovani/rider_detail.html', {
-		'rider': rider
+		'rider': rider,
 		'form': form
 	})
