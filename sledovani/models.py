@@ -6,8 +6,8 @@ class Rider(models.Model):
 	delka = models.CharField(max_length=18)
 	sirka = models.CharField(max_length=18)
 	up = models.DateTimeField(auto_now=True)
-	lat = models.DecimalField(max_digits=10, decimal_places=6)
-	lng = models.DecimalField(max_digits=10, decimal_places=6)
+	lat = models.DecimalField(max_digits=10, decimal_places=6, default=0)
+	lng = models.DecimalField(max_digits=10, decimal_places=6, default=0)
 	
 	def update(self, dx, dy, lat, lng):
 		self.delka = dx
