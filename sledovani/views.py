@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Rider
+from .forms import DestinationForm
 
 def riders_list(request):
 	riders = Rider.objects.all().order_by('up')
@@ -13,6 +14,15 @@ def rider_detail(request, pk):
 		lat = request.POST.get('lat')
 		lng = request.POST.get('lng')
 		rider.update(lat, lng, lat, lng)
+		form = DestinationForm(request.POST)
+		if form.is_valid():
+			dest = form.save(commit=false)
+			dest.rider = rider
+			dest.stamp = timezone.now()
+			dest.save()
+			return redirect('sledovani.views.rider_detail', pk=pk)
+		else:
+			form = DestinationForm()
 		#rider.delka = lat
 		#rider.sirka = lng
 		#rider.save()
@@ -20,4 +30,5 @@ def rider_detail(request, pk):
 	
 	return render(request, 'sledovani/rider_detail.html', {
 		'rider': rider
+		'form': form
 	})

@@ -19,3 +19,13 @@ class Rider(models.Model):
 	
 	def __str__(self):
 		return self.name
+
+class Destination(models.Model):
+	label = models.CharField(max_length=32)
+	rider = models.ForeignKey('sledovani.Rider')
+	lat = models.DecimalField(max_digits=10, decimal_places=6, default=0)
+	lng = models.DecimalField(max_digits=10, decimal_places=6, default=0)
+	stamp = models.DateTimeField(auto_now=True)
+	
+	def __str__(self):
+		return self.label
