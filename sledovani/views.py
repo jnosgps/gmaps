@@ -25,6 +25,8 @@ def rider_detail(request, pk):
 			return redirect('sledovani.views.rider_detail', pk=pk)
 		else:
 			form = DestinationForm()
+	else:
+		form = DestinationForm()
 		#rider.delka = lat
 		#rider.sirka = lng
 		#rider.save()
