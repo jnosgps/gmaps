@@ -18,6 +18,8 @@ def rider_detail(request, pk):
 		if form.is_valid():
 			dest = form.save(commit=false)
 			dest.rider = rider
+			dest.lat = lat
+			dest.lng = lng
 			dest.stamp = timezone.now()
 			dest.save()
 			return redirect('sledovani.views.rider_detail', pk=pk)
