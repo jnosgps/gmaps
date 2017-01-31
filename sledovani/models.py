@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-
+# pole delka a sirka jsou zbytecna
 class Rider(models.Model):
 	name = models.CharField(max_length=32)
 	delka = models.CharField(max_length=18)
@@ -14,7 +14,7 @@ class Rider(models.Model):
 		self.sirka = dy
 		self.lat = lat
 		self.lng = lng
-		up = timezone.now()
+		self.up = timezone.now()
 		self.save()
 	
 	def __str__(self):
