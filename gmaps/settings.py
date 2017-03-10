@@ -25,7 +25,7 @@ SECRET_KEY = '9x2q70wgc@ja_&k!u%3a8^9zca=3hpw98o7m1&iij8t*)qnq6g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['baxgtx.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['baxgtx.pythonanywhere.com', '127.0.0.1', 'localhost']
 
 
 # Application definition

@@ -17,23 +17,65 @@
 				margin: 0;
 				padding: 0;
 			}
+			
+			body header {
+				margin-top: 40px;
+				margin-left: 20px;
+				margin-bottom: 30px;
+				font-size: 150%;
+			}
 		</style>
 	</head>
 	<body>
-		<p>delka: {{ rider.delka }}</p>
-		<p>sirka: {{ rider.sirka }}</p>
-		<p>update: {{ rider.up }}</p>
-		
-		<div>
-			<form method="POST">{% csrf_token %}
-				{{ form.as_p }}
-				<button type="submit">Zadat destinaci</button>
-			</form>
-		</div>
+		<header>
+			<p>delka: {{ rider.delka }}</p>
+			<p>sirka: {{ rider.sirka }}</p>
+			<p>update: {{ rider.up }}</p>
+		</header>
 		
 		<div id="map"></div>
+		
+		<script src="http://cws.ceda.cz/mapserver/api/loader.js"></script>
 		<script>
-			function initMap() {
+			lat = {{ rider.delka }};
+			lng = {{ rider.sirka }};
+			Ext.onReady(function() {
+				MP.initialize('cz');
+				MP.setProxy('');
+				MP.mapWindow = new MP.MapWindow({
+					renderTo: 'map',
+					zoom: 15,
+					initCenter: [lat, lng],
+					items: [
+						new MP.MapUI.Navigation({components:['ALL']})
+					]
+				});
+				
+				var mPoint = new OpenLayers.Geometry.Point(lat, lng).transform(MP.mapWindow.map.displayProjection, MP.mapWindow.map.projection);
+				
+				var vectorLayer = new OpenLayers.Layer.Vector("drawing");
+				vectorLayer.addFeatures(new OpenLayers.Feature.Vector(
+					mPoint, // geometry
+					{}, // null   ---- WHY
+					{ // style
+						externalGraphic: 'car.png',
+						graphicWidth: 25,
+						graphicHeight: 25
+					}
+				));
+				MP.mapWindow.map.addLayer(vectorLayer);
+			});
+			if (navigator.geolocation) navigator.watchPosition(positionUpdate);			
+			function positionUpdate(pos) {
+				mLonLat = new OpenLayers.Geometry.LonLat(pos.coords.latitude, pos.coords.longitude);
+				vectorLayer.features[0].move(mLonLat);
+				vectorLayer.redraw(true);
+				MP.mapWindow.map.layers[0].redraw(true);
+			}
+		</script>
+		
+		<!--<script>
+			/*function initMap() {
 				var map = new google.maps.Map(document.getElementById('map'), {
 					center: {
 						lat: {{ rider.delka }},
@@ -82,9 +124,9 @@
 					//alert('Data: ' + data + '; Status: ' + status);
 				});
 				//console.log(dlat + ', ' + dlng);
-			}
+			}*/
 		</script>
 		
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAB8HPYGXSs_Ip3Wo1OIC7sI0m_DGTS34&callback=initMap"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAB8HPYGXSs_Ip3Wo1OIC7sI0m_DGTS34&callback=initMap"></script>-->
 	</body>
 </html>
