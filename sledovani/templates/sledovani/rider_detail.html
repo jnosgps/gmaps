@@ -39,6 +39,7 @@
 		<script>
 			lat = {{ rider.delka }};
 			lng = {{ rider.sirka }};
+			var vectorLayer;
 			Ext.onReady(function() {
 				MP.initialize('cz');
 				MP.setProxy('');
@@ -53,7 +54,7 @@
 				
 				var mPoint = new OpenLayers.Geometry.Point(lat, lng).transform(MP.mapWindow.map.displayProjection, MP.mapWindow.map.projection);
 				
-				var vectorLayer = new OpenLayers.Layer.Vector("drawing");
+				vectorLayer = new OpenLayers.Layer.Vector("drawing");
 				vectorLayer.addFeatures(new OpenLayers.Feature.Vector(
 					mPoint, // geometry
 					{}, // null   ---- WHY
