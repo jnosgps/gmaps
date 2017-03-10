@@ -65,7 +65,7 @@
 				));
 				MP.mapWindow.map.addLayer(vectorLayer);
 			});
-			if (navigator.geolocation) navigator.watchPosition(positionUpdate);			
+			if (navigator.geolocation) navigator.geolocation.watchPosition(positionUpdate);			
 			function positionUpdate(pos) {
 				mLonLat = new OpenLayers.Geometry.LonLat(pos.coords.latitude, pos.coords.longitude);
 				vectorLayer.features[0].move(mLonLat);
