@@ -17,4 +17,4 @@ class Produkt(models.Model):
 	kategorie = models.ForeignKey('bubi.Kategorie')
 	
 	def __unicode__(self):
-		return self.jmeno
+		return self.nazev
