@@ -19,7 +19,7 @@ def kategorie(request, kat):
 		prods = Produkt.objects.get()
 	else:
 		prods = Produkt.objects.filter(kategorie__jmeno=kat).order_by('nazev').distinct()
-	return render(request, 'bubi/category.html', {'produkty': prods})
+	return render(request, 'bubi/category.html', {'produkty': prods, 'k': kat})
 
 def produkt(request, pk):
 	produkt = get_object_or_404(Produkt, pk=pk)
