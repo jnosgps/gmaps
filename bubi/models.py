@@ -4,13 +4,13 @@ from __future__ import unicode_literals
 from django.db import models
 
 class Kategorie(models.Model):
-	jmeno = models.CharField(100)
+	jmeno = models.CharField(max_length=100)
 	
 	def __unicode__(self):
 		return self.jmeno
 
 class Produkt(models.Model):
-	nazev = models.CharField(100)
+	nazev = models.CharField(max_length=100)
 	popis = models.TextField()
 	obrazek = models.ImageField(upload_to='img/produkty', blank=True, null=True)
 	cena = models.IntegerField()
