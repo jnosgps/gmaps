@@ -22,5 +22,5 @@ def kategorie(request, kat):
 	return render(request, 'bubi/category.html', {'produkty': prods})
 
 def produkt(request, pk):
-	produkt = get_object_or_404(Produkt.objects.get(pk=pk))
+	produkt = get_object_or_404(Produkt, pk=pk)
 	return render(request, 'bubi/detail.html', {'produkt': produkt})
