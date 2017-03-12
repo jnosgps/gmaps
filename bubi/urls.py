@@ -1,4 +1,6 @@
 from django.conf.urls import url
+from django.contrib.staticfiles.urls import static
+from django.conf import settings
 
 from . import views
 
