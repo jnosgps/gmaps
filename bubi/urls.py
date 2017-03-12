@@ -1,0 +1,9 @@
+from django.conf.urls import url
+
+from . import views
+
+urlpatterns = [
+	url(r'^$', views.home, name='home'),
+	url(r'^kategorie/(?P<kat>(burgery|special|kalamary|prilohy|napoje))/$', views.kategorie, name='kategorie'),
+	url(r'^produkt/(?P<pk>([0-9]+))/$', views.produkt, name='produkt'),
+]

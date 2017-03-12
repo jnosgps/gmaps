@@ -1,0 +1,24 @@
+{% extends 'bubi/index_base.html' %}
+
+{% block pagetitle %}
+	Detail produktu
+{% endblock %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-md-12">
+			<div class="single-shop-product">
+				<div class="product-upper">
+					<img src="{{ produkt.obrazek.url }}" alt="{{ produkt.nazev }}">
+				</div>
+				<h2><a href="">{{ produkt.nazev }}</a></h2>
+				<div class="product-carousel-price">
+					<ins>{{ produkt.cena }},- KÄŤ</ins>
+				</div>
+				<div class="product-option-shop">
+					<p>{{ produkt.popis }}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
