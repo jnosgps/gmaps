@@ -416,7 +416,7 @@ z-index: 999;}
   text-decoration: none;border-color: #444;
 }
 .product-carousel-price ins {
-  color: #5a88ca;
+  color: #43ac3e;
   font-weight: 700;
   margin-right: 5px;
   text-decoration: none;
@@ -555,7 +555,7 @@ padding: 35px 0 180px;}
 
 .footer-bottom-area {background: #000;color: #fff}
 .footer-about-us span {
-  color: #5a88ca;
+  color: #43ac3e;
 }
 .footer-wid-title {
   font-family: raleway;
@@ -582,7 +582,7 @@ padding: 35px 0 180px;}
 
 
 .footer-social a {
-  background: none repeat scroll 0 0 #5a88ca;
+  background: none repeat scroll 0 0 #43ac3e;
   color: #fff;
   display: inline-block;
   font-size: 20px;
@@ -812,7 +812,7 @@ input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
     width: 50px;
 }
 .add_to_cart_button {
-    background: none repeat scroll 0 0 #5a88ca;
+    background: none repeat scroll 0 0 #43ac3e;
     border: medium none;
     color: #fff;
     padding: 6px 25px;display: inline-block
