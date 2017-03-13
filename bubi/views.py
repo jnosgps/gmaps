@@ -14,7 +14,14 @@ def kategorie(request, kat):
 		'prilohy': u'Přílohy',
 		'napoje': u'Nápoje',
 	}
-	k = kat
+	kk = {
+		'burgery': 'burgery',
+		'special': 'special',
+		'kalamary': 'kalamary',
+		'prilohy': 'prilohy',
+		'napoje': 'napoje',
+	}
+	k = kk[kat]
 	
 	if kat not in ['burgery', 'special', 'kalamary', 'prilohy', 'napoje']:
 		prods = Produkt.objects.get()
