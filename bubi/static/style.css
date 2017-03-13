@@ -1140,8 +1140,8 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 
 .single-shop-product ins {
 	margin: auto;
-	font-size: 30px;
-	text-align: right;
+	font-size: 25px;
+	margin-right: 35px;
 	margin-top: -5px;
 }
 
