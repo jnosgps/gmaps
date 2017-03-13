@@ -674,12 +674,11 @@ width: 10px;
 }
 
 .footer-card-icon {
-  font-size: 30px;
   text-align: right;
 }
 
 .footer-card-icon a, .footer-card-icon a:visited, .footer-card-icon a:link, .footer-card-icon a:hover {
-	font-size: 40%;
+	font-size: 100%;
 	text-decoration: none;
 }
 
