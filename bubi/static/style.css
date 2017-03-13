@@ -421,7 +421,7 @@ z-index: 999;}
 	text-align: right;
   color: #689f48;
   font-weight: 700;
-  margin-right: 5px;
+  margin-right: 15px;
   text-decoration: none;
 }
 .product-hover a i.fa {
@@ -434,6 +434,7 @@ z-index: 999;}
     line-height: 25px;
     margin-bottom: 10px;
     margin-top: 15px;
+	text-align: center;
 }
 
 
@@ -755,13 +756,11 @@ input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
 }
 .thubmnail-recent > h2 a {
     color: #222;
-	margin: auto;
 }
 .product-sidebar-price > ins {
     color: #5a88ca;
     font-weight: 700;
-	font-size: 35px;
-    margin-right: 20px;
+    margin-right: 10px;
     text-decoration: none;
 }
 .single-sidebar > ul {
@@ -815,7 +814,8 @@ input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
 .product-inner-price > ins {
     color: #5a88ca;
     font-weight: 700;
-    margin-right: 10px;
+	font-size: 35px;
+    margin-right: 20px;
     text-decoration: none;
 }
 .quantity {
