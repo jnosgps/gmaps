@@ -34,7 +34,7 @@
 {% endblock %}
 
 {% block menu %}
-	{% if k == 'burgery' %}
+	{% if k === 'burgery' %}
 	<li class="active"><a href="{% url 'kategorie' kat='burgery' %}">Burgery</a></li>
 	{% else %}
 	<li><a href="{% url 'kategorie' kat='burgery' %}">Burgery</a></li>
