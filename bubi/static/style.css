@@ -1129,7 +1129,8 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 .single-shop-product h2 {
     font-size: 20px;
 	text-align: center;
-    margin: 30px 0;
+    margin-top: 15px;
+	margin-bottom: 5px;
 }
 .product-option-shop {
     margin-top: 15px;
@@ -1138,7 +1139,8 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 .single-shop-product {margin-bottom: 50px}
 
 .single-shop-product ins {
-	margin-right: 15px;
+	margin: auto;
+	/*margin-right: 30px;*/
 }
 
 .pagination > li > a, .pagination > li > span {
