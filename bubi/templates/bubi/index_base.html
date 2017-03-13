@@ -67,20 +67,16 @@
         <div class="container">
             <div class="row">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#abcd1234">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
                 </div> 
-                <div class="navbar-collapse collapse">
+                <div class="navbar-collapse collapse" id="abcd1234">
                     <ul class="nav navbar-nav" id="main-menu-x">
-						<li><a href="{% url 'kategorie' kat='burgery' %}">Burgery</a></li>
-						<li><a href="{% url 'kategorie' kat='special' %}">Burgery speciál</a></li>
-						<li><a href="{% url 'kategorie' kat='kalamary' %}">Kalamáry</a></li>
-						<li><a href="{% url 'kategorie' kat='prilohy' %}">Přílohy</a></li>
-						<li><a href="{% url 'kategorie' kat='napoje' %}">Nápoje</a></li>
+						{% block menu %}{% endblock %}
 						<li><a href="#kontakt" name="kontakt">Kontakt</a></li>
                     </ul>
                 </div>  
