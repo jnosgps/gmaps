@@ -6,10 +6,13 @@
 
 {% block content %}
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
 			<div class="single-shop-product">
 				<div class="product-upper">
-					<img src="{{ produkt.obrazek.url }}" alt="{{ produkt.nazev }}">
+					{% if produkt.obrazek %}
+						<img src="{{ produkt.obrazek.url }}" alt="{{ produkt.nazev }}">
+					{% endif %}
 				</div>
 				<h2><a href="">{{ produkt.nazev }}</a></h2>
 				<div class="product-carousel-price">
@@ -23,3 +26,31 @@
 		</div>
 	</div>
 {% endblock %}
+
+{% block menu %}
+	{% if k == 'burgery' %}
+	<li class="active"><a href="{% url 'kategorie' kat='burgery' %}">Burgery</a></li>
+	{% else %}
+	<li><a href="{% url 'kategorie' kat='burgery' %}">Burgery</a></li>
+	{% endif %}
+	{% if k == 'special' %}
+	<li class="active"><a href="{% url 'kategorie' kat='special' %}">Burgery speciál</a></li>
+	{% else %}
+	<li><a href="{% url 'kategorie' kat='special' %}">Burgery speciál</a></li>
+	{% endif %}
+	{% if k == 'kalamary' %}
+	<li class="active"><a href="{% url 'kategorie' kat='kalamary' %}">Kalamáry</a></li>
+	{% else %}
+	<li><a href="{% url 'kategorie' kat='kalamary' %}">Kalamáry</a></li>
+	{% endif %}
+	{% if k == 'prilohy' %}
+	<li class="active"><a href="{% url 'kategorie' kat='prilohy' %}">Přílohy</a></li>
+	{% else %}
+	<li><a href="{% url 'kategorie' kat='prilohy' %}">Přílohy</a></li>
+	{% endif %}
+	{% if k == 'napoje' %}
+	<li class="active"><a href="{% url 'kategorie' kat='napoje' %}">Nápoje</a></li>
+	{% else %}
+	<li><a href="{% url 'kategorie' kat='napoje' %}">Nápoje</a></li>
+	{% endif %}
+{% endblock menu %}

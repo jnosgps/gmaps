@@ -11,7 +11,9 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="single-shop-product">
 						<div class="product-upper">
-							<img src="{{ produkt.obrazek.url }}" alt="{{ produkt.nazev }}">
+							{% if produkt.obrazek %}
+								<img src="{{ produkt.obrazek.url }}" alt="{{ produkt.nazev }}">
+							{% endif %}
 						</div>
 						<h2><a href="">{{ produkt.nazev }}</a></h2>
 						<div class="product-carousel-price">
