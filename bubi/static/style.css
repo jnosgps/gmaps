@@ -604,7 +604,7 @@ padding: 35px 0 180px;}
 
 .footer-social a:hover {background-color: #222;border-color: #666}
 
-.footer-social {margin-top: 20px; position: relative; float: right; text-align: center;}
+.footer-social {margin-top: 20px; text-align: center;}
 
 
 .newsletter-form input[type="email"] {
