@@ -12,7 +12,7 @@
 					<div class="single-shop-product">
 						<div class="product-upper">
 							{% if produkt.obrazek %}
-								<img src="{{ produkt.obrazek.url }}" alt="{{ produkt.nazev }}" class="img-responsive" width="195" height="243">
+								<img src="{{ produkt.obrazek.url }}" alt="{{ produkt.nazev }}" class="img-responsive" width="{{produkt.obrazek.width}}" height="{{produkt.obrazek.height}}">
 							{% else %}
 								<img src="/static/img/producer-nologo.png" alt="{{ produkt.nazev }}" class="img-responsive" width="195" height="243">
 							{% endif %}
