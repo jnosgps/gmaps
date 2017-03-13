@@ -13,6 +13,8 @@
 						<div class="product-upper">
 							{% if produkt.obrazek %}
 								<img src="{{ produkt.obrazek.url }}" alt="{{ produkt.nazev }}">
+							{% else %}
+								<img src="{% static 'img/producer-nologo.png' %}" alt="{{ produkt.nazev }}">
 							{% endif %}
 						</div>
 						<h2><a href="">{{ produkt.nazev }}</a></h2>
