@@ -417,7 +417,8 @@ z-index: 999;}
 }
 .product-carousel-price ins {
 	position: relative;
-	align: right;
+	float: right;
+	text-align: right;
   color: #689f48;
   font-weight: 700;
   margin-right: 5px;
@@ -561,6 +562,8 @@ padding: 35px 0 180px;}
 }
 .footer-about-us p {
 	font-weight: bold;
+	margin-left: 20px;
+	text-align: center;
 }
 .footer-wid-title {
   font-family: raleway;
