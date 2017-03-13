@@ -1151,7 +1151,7 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 	border: 1px #689f48 solid;
 }
 
-.add_to_cart_button a:link, .add_to_cart_button a:visited {
+a:link, a:visited {
 	text-decoration: none;
-	color: #fff;
+	color: inherit;
 }
