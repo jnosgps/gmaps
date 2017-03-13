@@ -1145,7 +1145,8 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 	margin-top: -5px;
 }
 
-.product-upper {max-height: 230px}
+.product-upper img {max-height: 200px}
+.img-responsive {max-height: 200px}
 
 .pagination > li > a, .pagination > li > span {
   color: #5a88ca;
