@@ -26,31 +26,3 @@
 		</div>
 	</div>
 {% endblock %}
-
-{% block menu %}
-	{% if k == 'burgery' %}
-	<li class="active"><a href="{% url 'kategorie' kat='burgery' %}">Burgery</a></li>
-	{% else %}
-	<li><a href="{% url 'kategorie' kat='burgery' %}">Burgery</a></li>
-	{% endif %}
-	{% if k == 'special' %}
-	<li class="active"><a href="{% url 'kategorie' kat='special' %}">Burgery speciál</a></li>
-	{% else %}
-	<li><a href="{% url 'kategorie' kat='special' %}">Burgery speciál</a></li>
-	{% endif %}
-	{% if k == 'kalamary' %}
-	<li class="active"><a href="{% url 'kategorie' kat='kalamary' %}">Kalamáry</a></li>
-	{% else %}
-	<li><a href="{% url 'kategorie' kat='kalamary' %}">Kalamáry</a></li>
-	{% endif %}
-	{% if k == 'prilohy' %}
-	<li class="active"><a href="{% url 'kategorie' kat='prilohy' %}">Přílohy</a></li>
-	{% else %}
-	<li><a href="{% url 'kategorie' kat='prilohy' %}">Přílohy</a></li>
-	{% endif %}
-	{% if k == 'napoje' %}
-	<li class="active"><a href="{% url 'kategorie' kat='napoje' %}">Nápoje</a></li>
-	{% else %}
-	<li><a href="{% url 'kategorie' kat='napoje' %}">Nápoje</a></li>
-	{% endif %}
-{% endblock menu %}

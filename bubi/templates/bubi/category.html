@@ -32,31 +32,3 @@
 		<div class="row"><div class="col-md-12">Zatím v této kategorii nemáme žádné produkty. :-)</div></div>
 	{% endif %}
 {% endblock %}
-
-{% block menu %}
-	{% if kkk == 'burgery' %}
-	<li class="active"><a href="{% url 'kategorie' kat='burgery' %}">Burgery</a></li>
-	{% else %}
-	<li><a href="{% url 'kategorie' kat='burgery' %}">Burgery[{{k}}]</a></li>
-	{% endif %}
-	{% if kkk == 'special' %}
-	<li class="active"><a href="{% url 'kategorie' kat='special' %}">Burgery speciál</a></li>
-	{% else %}
-	<li><a href="{% url 'kategorie' kat='special' %}">Burgery speciál</a></li>
-	{% endif %}
-	{% if kkk == 'kalamary' %}
-	<li class="active"><a href="{% url 'kategorie' kat='kalamary' %}">Kalamáry</a></li>
-	{% else %}
-	<li><a href="{% url 'kategorie' kat='kalamary' %}">Kalamáry</a></li>
-	{% endif %}
-	{% if kkk == 'prilohy' %}
-	<li class="active"><a href="{% url 'kategorie' kat='prilohy' %}">Přílohy</a></li>
-	{% else %}
-	<li><a href="{% url 'kategorie' kat='prilohy' %}">Přílohy</a></li>
-	{% endif %}
-	{% if kkk == 'napoje' %}
-	<li class="active"><a href="{% url 'kategorie' kat='napoje' %}">Nápoje</a></li>
-	{% else %}
-	<li><a href="{% url 'kategorie' kat='napoje' %}">Nápoje</a></li>
-	{% endif %}
-{% endblock menu %}

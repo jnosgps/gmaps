@@ -61,7 +61,11 @@
 					</div> 
 					<div class="collapse navbar-collapse" id="abcd1234">
 						<ul class="nav navbar-nav">
-							{% block menu %}{% endblock %}
+							<li><a href="{% url 'kategorie' kat='burgery' %}">Burgery[{{k}}]</a></li>
+							<li><a href="{% url 'kategorie' kat='special' %}">Burgery speciál</a></li>
+							<li><a href="{% url 'kategorie' kat='kalamary' %}">Kalamáry</a></li>
+							<li><a href="{% url 'kategorie' kat='prilohy' %}">Přílohy</a></li>
+							<li><a href="{% url 'kategorie' kat='napoje' %}">Nápoje</a></li>
 							<li><a href="#kontakt" name="kontakt">Kontakt</a></li>
 						</ul>
 					</div>  
