@@ -1141,11 +1141,11 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 .single-shop-product ins {
 	margin: auto;
 	font-size: 25px;
-	margin-right: 35px;
-	margin-top: -5px;
+	margin-right: 32px;
+	margin-top: -3px;
 }
 
-.product-upper img {max-height: 200px}
+.product-upper img {max-height: 200px; margin: auto}
 /*
 .img-responsive {max-height: 200px}
 */
