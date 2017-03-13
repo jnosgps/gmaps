@@ -14,7 +14,7 @@
 							{% if produkt.obrazek %}
 								<img src="{{ produkt.obrazek.url }}" alt="{{ produkt.nazev }}">
 							{% else %}
-								<img src="/static/img/producer-nologo.png" alt="{{ produkt.nazev }}">
+								<img src="/static/img/producer-nologo.png" alt="{{ produkt.nazev }}" class="img-thumbnail" width="195" height="243">
 							{% endif %}
 						</div>
 						<h2><a href="">{{ produkt.nazev }}</a></h2>
