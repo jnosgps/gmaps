@@ -14,14 +14,6 @@ def kategorie(request, kat):
 		'prilohy': u'Přílohy',
 		'napoje': u'Nápoje',
 	}
-	kkqqww = {
-		'burgery': 'burgery',
-		'special': 'special',
-		'kalamary': 'kalamary',
-		'prilohy': 'prilohy',
-		'napoje': 'napoje',
-	}
-	kax = kkqqww[kat]
 	
 	if kat not in ['burgery', 'special', 'kalamary', 'prilohy', 'napoje']:
 		prods = Produkt.objects.get()
@@ -29,7 +21,6 @@ def kategorie(request, kat):
 		prods = Produkt.objects.filter(kategorie__jmeno=kat).order_by('nazev').distinct()
 	return render(request, 'bubi/category.html', {
 		'produkty': prods,
-		'kkk': kax,
 	})
 
 def produkt(request, pk):
