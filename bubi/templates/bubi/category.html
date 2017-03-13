@@ -10,7 +10,7 @@
 		{% for produkt in produkty %}
 				<div class="col-md-3 col-sm-6">
 					<div class="single-shop-product">
-						<div class="product-thumb">
+						<div class="product-upper">
 							{% if produkt.obrazek %}
 								<img src="{{ produkt.obrazek.url }}" alt="{{ produkt.nazev }}">
 							{% endif %}
