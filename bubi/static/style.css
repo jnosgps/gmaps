@@ -559,6 +559,9 @@ padding: 35px 0 180px;}
 .footer-about-us span {
   color: #689f48;
 }
+.footer-about-us p {
+	font-width: bold;
+}
 .footer-wid-title {
   font-family: raleway;
   font-size: 30px;
