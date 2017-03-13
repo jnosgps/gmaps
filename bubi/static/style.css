@@ -129,8 +129,8 @@ z-index: 999;}
 
 
 .shopping-item:hover {
-    background: none repeat scroll 0 0 #5a88ca;
-    border-color: #5a88ca;
+    background: none repeat scroll 0 0 #689f48;
+    border-color: #689f48;
 }
 .shopping-item:hover a {
     color: #fff;text-decoration: none
