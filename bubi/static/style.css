@@ -151,6 +151,7 @@ z-index: 999;}
 
 .mainmenu-area ul.navbar-nav li:hover a, .mainmenu-area ul.navbar-nav li.active a {background: #689f48; color:#FFF;}
 .mainmenu-area .nav > li > a:focus {color: #FFF;}
+.mainmenu-area ul.navbar-nav li a:visited {color:inherit; background-color:inherit;}
 
 .slider-area { width:80%; position:relative; margin:0 auto; padding:5px;}
 /*-------------------------
@@ -834,6 +835,7 @@ input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
     padding: 6px 25px;display: inline-block
 }
 .add_to_cart_button:hover {background-color: #222;color: #fff;text-decoration: none}
+.add_to_cart_button:link, .add_to_cart_button:visited {color: #fff; text-decoration: none;}
 form.cart {
     margin-bottom: 25px;
 }
