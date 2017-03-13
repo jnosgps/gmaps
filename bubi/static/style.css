@@ -1144,7 +1144,7 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 	margin-right: 32px;
 	margin-top: -3px;
 }
-.product-upper {margin: auto}
+.product-upper {margin: auto; display: block; overflow: hidden;}
 .product-upper img {max-height: 220px}
 /*
 .img-responsive {max-height: 200px}
