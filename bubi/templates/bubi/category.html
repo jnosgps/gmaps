@@ -18,11 +18,13 @@
 							{% endif %}
 						</div>
 						<h2><a href="">{{ produkt.nazev }}</a></h2>
-						<div class="product-carousel-price">
-							<ins>{{ produkt.cena }},- Kč</ins>
-						</div>
-						<div class="product-option-shop">
-							<a class="add_to_cart_button" href="{% url 'produkt' pk=produkt.pk %}">Přejít k popisu</a>
+						<div class="row">
+							<div class="product-carousel-price">
+								<ins>{{ produkt.cena }},- Kč</ins>
+							</div>
+							<div class="product-option-shop">
+								<a class="add_to_cart_button" href="{% url 'produkt' pk=produkt.pk %}">Přejít k popisu</a>
+							</div>
 						</div>
 					</div>
 				</div>
