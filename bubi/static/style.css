@@ -601,7 +601,7 @@ padding: 35px 0 180px;}
   margin-bottom: 10px;
   padding-top: 5px;
   text-align: center;
-  width: 40px;border: 1px solid #f4f;
+  width: 40px;border: 1px solid #f4f4f4;
 }
 
 .footer-social a:hover {background-color: #222;border-color: #666}
@@ -1153,5 +1153,5 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 
 a:link, a:visited {
 	text-decoration: none;
-	color: #f4f;
+	color: #fff;
 }
