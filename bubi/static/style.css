@@ -755,6 +755,7 @@ input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
 }
 .thubmnail-recent > h2 a {
     color: #222;
+	margin: auto;
 }
 .product-sidebar-price > ins {
     color: #5a88ca;
